@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgr_timkiem"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@drawable/bgrappbar"
+        android:id="@+id/appbarlayouttimkiem"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="55dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toilbartimkiem"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_horizontal"
+            app:titleTextColor="#494545"
+            app:title="Nghệ sĩ, bài hát"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:collapseIcon="?attr/actionModeCloseDrawable" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewtimkiem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarlayouttimkiem"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:text="Khônng tìm thấy bài hát  "
+        android:textSize="18sp"
+        android:id="@+id/textviewtimkiemnull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:visibility="gone"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:text="Khônng tìm thấy bài hát  "
+        android:textSize="18sp"
+        android:id="@+id/textviewtimkiemnotfound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
